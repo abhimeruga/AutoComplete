@@ -38,14 +38,16 @@ import "./App.css";
 
 function App() {
   return (
-    <Provider store={store}>
-      <div className="App">
-        <Switch>
-          <Route exact path="/" component={AutocompleteComponent} />
-          <Route exact path="/study" component={Study} />
-        </Switch>
-      </div>
-    </Provider>
+    <>
+      <AutocompleteComponent />
+      <Provider store={store}>
+        <div className="App">
+          <Switch>
+            <Route exact path="/study" component={Study} />
+          </Switch>
+        </div>
+      </Provider>
+    </>
   );
 }
 
